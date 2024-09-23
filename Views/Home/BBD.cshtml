@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Projects";
+}
+<h2>@ViewBag.Title.</h2>
+<p><a class="btn btn-default" href="@Url.Action("Projects", "Home")">Back To Projects</a></p>
+<div>
+    <div>
+        <h2>Ballard Bus Data</h2>
+        <ul>
+            <li>
+                As a project leader, I worked alongside executive leadership, project managers, control engineers,
+                and end users to develop solutions to organizational needs.
+            </li>
+            <li>
+                Developed a real-time data ingress system that download Bus data from FTP/SFTP server and
+                convert DAT data into SQL data format. In addition, it imported approximately 50K files into SQL
+                Local DB for Ballard, AVEVA Insight 3rd party server, and Azure Cloud Server every day.
+            </li>
+            <li>
+                Maintained the Ballard Bus System in C# ASP.NET Core resulting in a remarkable 30 % reduction in
+                processing time.
+            </li>
+            <li>
+                Developed a web application to provide essential support for a controls team; therefore, it can
+                check data loss, backfill missing data, and configure bus modules using a web application, resulting
+                in a significant increase in overall team productivity.
+            </li>
+            <li>
+                Technologies: C# ASP.NET MVC, VB, MS SQL, Ajax, Json, Git, Aveva, IIS and Azure.
+            </li>
+        </ul>
+
+    </div>
+    <div>
+        <b>
+            <ol>
+                <li>
+                    How to support Engineers and monitor the real-time data ingress system, Ballard Bus Data
+                    <img src="~/Image/BBD-FlowChart.png" style="width:70%;" />
+                </li>
+                <li>
+                    Troubleshooting using the WebBallardBusData<br />
+                    <img src="~/Image/BBD-Troubleshooting.png" style="width:70%;" />
+                </li>
+                <li>
+                    Request Page:<br />
+                    Description: Create Backfilling data ticket by login user. <br />
+                    Instruction:
+                    Once users create request tickets on the request page, it will backfill data automatically and send an email with backfill results after complete.<br />
+                    <img src="~/Image/BBD-Request.png" style="width:50%;" />
+
+                </li>
+                <li>
+                    Description: Create/ Edit/ Delete module information<br/>
+                    Details:<br/>
+                    Configure all Ballard Bus Modules on the module page.
+                    <img src="~/Image/BBD-Module.png" style="width:100%;" />
+                </li>
+                <li>
+                    Description: Check module owners in Controls team and easy to communicate with them<br />
+                    Details:<br />
+                    Filtering/ sorting module owner table.
+                    Create new owner and update existing owner.
+                    <img src="~/Image/BBD-Module Owner.png" style="width:100%;" />
+                </li>
+                <li>
+                    Description:<br />
+                    Check Bus data and display them with a line chart.
+                    Easy to find missed data and backfill RDU data using the web application
+                    Instruction:<br />
+                    Select a module and year-month ~ Enter time interval, default setting is 7 min~ Click ‘See Missing Data’ to check data
+                    Result: it did not send JFA22D0001 data between 07/04/2022 9:52 and 07/04/2022 10:02. (10 Min and it is acceptable and ignore it.)
+                    <img src="~/Image/BBD-Archive.png" style="width:100%;" />
+                    <img src="~/Image/BBD-Archive.png" style="width:100%;" />
+                </li>
+                <li>
+                    <img src="~/Image/BBD-Archive-Backfill.png" style="width:100%;" />
+                    
+                    <img src="~/Image/BBD-ReadCSVFile.png" style="width:100%;" />
+                    <img src="~/Image/BBD-Status.png" style="width:100%;" />
+                    <img src="~/Image/BBD-History.png" style="width:100%;" />
+                </li>
+
+
+            </ol>
+        </b>
+      
+   
+
+    </div>
+    <p><a class="btn btn-default" href="@Url.Action("Projects", "Home")">Back To Projects</a></p>
+</div>

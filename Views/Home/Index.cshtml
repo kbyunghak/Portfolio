@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron" style="height:auto !important;">
+    <div style="float: left; width: 50%;">
+        <img src="~/Image/ak.png" style="height: 40%; width: 50%; object-fit: contain" />
+        <p class="lead">
+            
+            Andrew Kim <br />
+            Software Developer
+        </p>
+    </div>
+    <div>
+        <p>
+            Organized and passionate software developer with expertise in design, installation, testing and
+            maintenance of software systems. Fluent in C#, Java, ASP.NET MVC/ Core, SQL, JavaScript and CSS
+            Programming languages. Able to effectively self-manage during independent projects, as well as
+            collaborate as part of a productive team.
+        </p>
+    </div>   
+    <p>
+        <button id="btnResume" class="btn btn-primary btn-lg" onclick="showResume();">Show Andrew's Resume</button>
+        <a href="https://www.linkedin.com/in/kbyunghak/" class="btn btn-primary btn-lg">Go To LinkedIn</a>
+    </p>
+    
+    
+</div>
+<div id="resume" hidden>
+    <object data="~/Image/AndrewKim_Resume.pdf" type="application/pdf" width="100%;" height="1000px;">
+        <p>Alternative text - include a link <a href="~/Image/AndrewKim_Resume.pdf" style="height:auto !important;">to the PDF!</a></p>
+    </object>
+</div>
+@*<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>*@
+
+<script>
+    function showResume() {
+        var btnName = $('#btnResume').text();
+        if (btnName == "Hide Andrew's Resume") {
+            $('#resume').hide();
+            $('#btnResume').text("Show Andrew's Resume");
+        } else {
+            $('#resume').show();
+            $('#btnResume').text("Hide Andrew's Resume");
+        }
+        
+    }
+</script>
