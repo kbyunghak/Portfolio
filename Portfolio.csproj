@@ -147,9 +147,14 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Image\ak.png" />
+    <Content Include="Image\Azzier-CSSEditor.PNG" />
     <Content Include="Image\Azzier-Mobile.png" />
     <Content Include="Image\Azzier-Mobile2.png" />
+    <Content Include="Image\Azzier-Radgrid.PNG" />
     <Content Include="Image\Azzier-web.png" />
+    <Content Include="Image\AzzierMobile-download.png" />
+    <Content Include="Image\AzzierMobile-GooglePlay.png" />
+    <Content Include="Image\AzzierMobile-WO.png" />
     <Content Include="Image\BBD-Archive-Backfill.png" />
     <Content Include="Image\BBD-Archive.png" />
     <Content Include="Image\BBD-FlowChart.png" />
