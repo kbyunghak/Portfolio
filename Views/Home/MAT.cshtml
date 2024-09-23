@@ -25,5 +25,69 @@
                 Technologies: ASP.NET Core, C#, MS SQL, T-SQL, Ajax, JSON, JavaScript, SVN, and IIS
             </li>
         </ul>
-        <p><a class="btn btn-default" href="@Url.Action("Projects", "Home")">Back To Projects</a></p>    
+        <p><a class="btn btn-default" href="@Url.Action("Projects", "Home")">Back To Projects</a></p>
+    </div>
+    <div>
+        <b>
+            <ol>
+                <li>
+                    The main purpose of Stack Timer is to track the time for module assembly. With this application, the assembler can record the time it took to do a complete or partial build and the data can later be analyzed to find improvements and monitor issues. The application handles special cases depending on the Lot ID, provides functionality for pausing and resuming the build timer, and allows the assembler to input the results of leak and I/O tests. Also, the application changes the stack light colour based on the remaining time for a build and which screen is being displayed.
+                    The application is a Windows Form written in C# with Entity Framework 6. The database is ModuleAssembly and it can be found in the local server using SSMS.
+                    <br />
+                    <img src="~/Image/MAT-FlowChart.png" style="width:50%;" />
+                </li>
+                <li>
+                    Home Screen:<br />
+                    Description: Enter required information to start or continue a build<br />
+                    Details:
+                    The assembler enters their initials, experience level, the Lot ID, and revision
+                    For the revision, the user inputs a number between 0 and 9, and a letter between A and Z
+                    <br />
+                    <img src="~/Image/MAT-Home.png" style="width:50%;" />
+                </li>
+                <li>
+                    Process Timer Screen:<br />
+                    Description: Displays the build time, pause or end build<br />
+                    Details:
+                    The Assembler can see a counter with the time for a build and a progress bar
+                    Depending on the provided Lot ID in the Home screen, the counter goes up or down
+                    <br />
+                    <img src="~/Image/MAT-Main.png" style="width:50%;" />
+                    Pause Option:<br />
+                    The user can pause the counter by choosing one of the pause options and, when the counter is paused, a different counter is displayed to track the paused time of the build
+                    To resume the build, the Resume button must be pressed
+                    <br />
+                    <img src="~/Image/MAT-Pause.png" style="width:50%;" />
+                    <br />
+                    Leak Test Screen:<br />
+                    Description: Input the results of a leak test trial<br />
+                    Details:
+                    The assembler can input the results of a leak test trial by pressing the Pass or the Fail buttons
+                    If the Pass button is pressed, then the application directs the user to the Process Timer screen
+                    If the Fail button is pressed, then the application directs the user to the Leak Test Fail screen
+                    The leak test has its own timer, but the data is further processed to separate the time taken for each trial
+                    <br />
+                    <img src="~/Image/MAT-leaktest.png" style="width:50%;" />
+                    <br />
+                    Leak Test Fail Screen:<br />
+                    Description: Input the details of a failed leak test trial<br />
+                    Details:
+                    The content of this screen is dependent on the Lot ID provided in the Home screen
+                    The assembler can specify which tests failed, the failed components, and the reasons of failure
+                    <br />
+                    <img src="~/Image/MAT-TestFailed.png" style="width:50%;" />
+                </li>
+                <li>
+                    Stack Light Options: 
+                    <ul>
+                        <li>
+                            Off, Green, Yellow, Red, Blink Green, Blink Red
+                        </li>     
+                    </ul>
+                    <img src="~/Image/MAT-Stack.png" style="width:10%; height: 10%;" />
+                </li>                
+            </ol>
+        </b>
+    </div>
+    <p><a class="btn btn-default" href="@Url.Action("Projects", "Home")">Back To Projects</a></p>
 </div>

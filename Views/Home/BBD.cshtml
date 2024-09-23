@@ -36,11 +36,11 @@
             <ol>
                 <li>
                     How to support Engineers and monitor the real-time data ingress system, Ballard Bus Data
-                    <img src="~/Image/BBD-FlowChart.png" style="width:70%;" />
+                    <img src="~/Image/BBD-FlowChart.png" style="width:50%;" />
                 </li>
                 <li>
                     Troubleshooting using the WebBallardBusData<br />
-                    <img src="~/Image/BBD-Troubleshooting.png" style="width:70%;" />
+                    <img src="~/Image/BBD-Troubleshooting.png" style="width:50%;" />
                 </li>
                 <li>
                     Request Page:<br />
@@ -51,42 +51,65 @@
 
                 </li>
                 <li>
-                    Description: Create/ Edit/ Delete module information<br/>
-                    Details:<br/>
-                    Configure all Ballard Bus Modules on the module page.
-                    <img src="~/Image/BBD-Module.png" style="width:100%;" />
+                    Module Page:<br />
+                    Description: Create/ Edit/ Delete module information<br />
+                    Details: Configure all Ballard Bus Modules on the module page.<br />
+                    <img src="~/Image/BBD-Module.png" style="width:50%;" />
                 </li>
                 <li>
+                    Module Owner Page:<br />
                     Description: Check module owners in Controls team and easy to communicate with them<br />
                     Details:<br />
                     Filtering/ sorting module owner table.
                     Create new owner and update existing owner.
-                    <img src="~/Image/BBD-Module Owner.png" style="width:100%;" />
+                    <img src="~/Image/BBD-Module Owner.png" style="width:50%;" />
                 </li>
                 <li>
-                    Description:<br />
+                    Description:
                     Check Bus data and display them with a line chart.
-                    Easy to find missed data and backfill RDU data using the web application
-                    Instruction:<br />
+                    Easy to find missed data and backfill RDU data using the web application<br />
+                    Instruction:
                     Select a module and year-month ~ Enter time interval, default setting is 7 min~ Click ‘See Missing Data’ to check data
-                    Result: it did not send JFA22D0001 data between 07/04/2022 9:52 and 07/04/2022 10:02. (10 Min and it is acceptable and ignore it.)
-                    <img src="~/Image/BBD-Archive.png" style="width:100%;" />
-                    <img src="~/Image/BBD-Archive.png" style="width:100%;" />
+                    <br/>
+                    Result: it did not send JFA22D0001 data between 07/04/2022 9:52 and 07/04/2022 10:02 but, it is acceptable and ignore it.
+                    <img src="~/Image/BBD-Archive.png" style="width:70%;" /><br/>
+                    Result: it did not send data between 07/11/2022 11:04 AM and 07/11/2022 01:37 PM. for 2.5 hours and it needs to investigate.
+                    Warning missing Dada and check module JBA22F0017 log files with Controls team.<br />
+                    <img src="~/Image/BBD-Archive-Backfill.png" style="width:70%;" />
                 </li>
                 <li>
-                    <img src="~/Image/BBD-Archive-Backfill.png" style="width:100%;" />
-                    
-                    <img src="~/Image/BBD-ReadCSVFile.png" style="width:100%;" />
-                    <img src="~/Image/BBD-Status.png" style="width:100%;" />
-                    <img src="~/Image/BBD-History.png" style="width:100%;" />
+                    Read Ballard Bus Data Page:<br />
+                    Description: Read RDU data with line charts<br />
+                    Instruction: Select ‘Module’ ~ Select ‘year-month’ ~ choose RDU files from archive folder ~ choose target Tags~ Click chart and change time range
+                    <img src="~/Image/BBD-ReadCSVFile.png" style="width:50%;" />
                 </li>
-
+                <li>
+                    Status Page: <br />
+                    Description: Monitor all the instances. / update the page every 10 secs<br />
+                    <ul>
+                        <li>
+                            Received and waiting: RDU files in processing
+                        </li>
+                        <li>
+                            In processing Folder: Upload data to Local DB
+                        </li>
+                        <li>
+                            Not processed: May have an error/ delay to upload Historian                            
+                        </li>
+                        <li>
+                            Waiting for Move/ Waiting for upload: Upload data to Azure cloud Server
+                        </li>
+                    </ul>
+                    <img src="~/Image/BBD-Status.png" style="width:50%;" />
+                </li>
+                <li>
+                    History Records Page:<br/>
+                    Description: Show log files from BPSQ62 and cannot be editable.<br />
+                    <img src="~/Image/BBD-History.png" style="width:50%;" />
+                </li>
 
             </ol>
-        </b>
-      
-   
-
+        </b>      
     </div>
     <p><a class="btn btn-default" href="@Url.Action("Projects", "Home")">Back To Projects</a></p>
 </div>

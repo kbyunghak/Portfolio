@@ -157,6 +157,15 @@
     <Content Include="Image\BBD-Request.png" />
     <Content Include="Image\BBD-Status.png" />
     <Content Include="Image\BBD-Troubleshooting.png" />
+    <Content Include="Image\hide_9684799.png" />
+    <Content Include="Image\MAT-FlowChart.png" />
+    <Content Include="Image\MAT-Home.png" />
+    <Content Include="Image\MAT-leaktest.png" />
+    <Content Include="Image\MAT-Main.png" />
+    <Content Include="Image\MAT-Pause.png" />
+    <Content Include="Image\MAT-Stack.png" />
+    <Content Include="Image\MAT-StackLight.png" />
+    <Content Include="Image\MAT-TestFailed.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Image\AndrewKim_Resume.pdf" />
