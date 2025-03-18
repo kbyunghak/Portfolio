@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.16dfe142.css",
+    "main.js": "/portfolio/static/js/main.1859130f.js",
+    "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/andrew3.jpg": "/portfolio/static/media/andrew3.159280deeb31aa25db14.jpg",
+    "static/media/Azzier.png": "/portfolio/static/media/Azzier.1c3b87b17d7e8ed3af48.png",
+    "static/media/portfolio.png": "/portfolio/static/media/portfolio.3649deb171bb4c826a73.png",
+    "static/media/AzzierMobile.png": "/portfolio/static/media/AzzierMobile.c5b86da1a5b70184ac38.png",
+    "static/media/Module_Assembly_Timer.png": "/portfolio/static/media/Module_Assembly_Timer.9f5914eb8613cfaa0b07.png",
+    "static/media/Andrew.png": "/portfolio/static/media/Andrew.95fa10075d55146899a3.png",
+    "static/media/ballard.png": "/portfolio/static/media/ballard.11450b7c3894ce8988ff.png",
+    "static/media/scheduler.png": "/portfolio/static/media/scheduler.7298b0f277f3058fdcff.png",
+    "static/media/vocaboost.png": "/portfolio/static/media/vocaboost.a740611349f276c699db.png",
+    "index.html": "/portfolio/index.html",
+    "main.16dfe142.css.map": "/portfolio/static/css/main.16dfe142.css.map",
+    "main.1859130f.js.map": "/portfolio/static/js/main.1859130f.js.map",
+    "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.16dfe142.css",
+    "static/js/main.1859130f.js"
+  ]
+}
