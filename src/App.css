@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  max-width: 900px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #0056b3;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.resume-name {
+  font-size: 32px;
+  font-weight: bold;
+  color: #0056b3;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.resume-title {
+  font-size: 18px;
+  color: #555;
+}
+
+.resume-contact {
+  font-size: 16px;
+  color: #333;
+  text-align: right;
+}
+
+.resume-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resume-contact li {
+  margin-bottom: 5px;
+}
+
+.resume-contact a {
+  text-decoration: none;
+  color: #0056b3;
+  font-weight: bold;
+}
+
+.resume-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.resume-main {
+  flex: 2;
+  padding-right: 30px;
+}
+
+.resume-section-heading {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0056b3;
+  border-bottom: 2px solid #0056b3;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.resume-section-heading::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 20px;
+    background-color: #0056b3;
+    margin-right: 10px;
+}
+
+
+.resume-footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #777;
+}
+
+.summary-section {
+  display: flex;
+  align-items: center;
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.summary-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.resume-contact a:hover {
+  color: #2E8B57;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .resume-header {
+      flex-direction: column;
+      text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  .resume-contact {
+      text-align: center;
+      margin-top: 10px;
+  }
+  .summary-section {
+      flex-direction: column;
+      text-align: center;
+  }
+  .summary-image {
+      margin: 0 auto 15px;
   }
 }
+
+.resume-aside {
+  flex: 1;
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 240px;
+}
+
+.skills-section ul li {
+  display: inline-block;
+  background: #e3e3e3;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.skills-section ul {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;;
+}
+
+.resume-list {  
+  line-height: 1.6;
+  font-size: 16px;
+  list-style: none;
+  text-align: left;
+  padding-left: 0 !important; 
+  margin-left: 0 !important;
+}
+
+.skills-section, .education-section, .interests-section {
+  margin-bottom: 15px;
+}
+
+.skills-section ul, .education-section ul, .interests-section ul {
+  padding-left: 0px;
+} 
