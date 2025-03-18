@@ -1,11 +1,439 @@
+/* === General Styles === */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f8f9fa;
   color: #333;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
+/* === Navbar Styles === */
+.navbar {
+  width: 100%;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.content {
+  padding-top: 70px;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.logo-link:hover {
+  color: yellow;
+}
+
+.portfolio-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.portfolio-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio-nav li {
+  display: inline;
+}
+
+.portfolio-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.portfolio-nav a:hover {
+  color: yellow;
+}
+
+/* === Hero Section === */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0056b3;
+  padding: 50px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: -webkit-fill-available;
+}
+
+.hero-content {
+  color: white;
+}
+
+.hero-content p {
+  font-size: 18px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.hero-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* === Buttons === */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: yellow;
+  color: black;
+  border: 2px solid black;
+}
+
+.btn-secondary {
+  background: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  opacity: 0.8;
+}
+
+/* === Contact Page === */
+.contact-container {
+  max-width: 400px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-container h2 {
+  color: #1E3A8A;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input Field Styling */
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  padding-left: 40px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #1E3A8A;
+  box-shadow: 0 0 5px rgba(30, 58, 138, 0.3);
+}
+
+/* Textarea Styling */
+.input-group textarea {
+  resize: none;
+  height: 100px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* Placeholder Styling */
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  font-family: inherit;
+  font-size: 16px;
+  color: #888;
+}
+
+/* Icons Styling */
+.icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 18px;
+}
+
+/* Fix for Textarea Icon Alignment */
+.input-group textarea + .icon {
+  top: 18px;
+  transform: none;
+}
+
+/* Send Button */
+.send-button {
+  background-color: #1E3A8A;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-button:hover {
+  background-color: #153477;
+}
+
+/* === Footer === */
+.resume-footer {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+/* === Mobile Responsive Fix === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .portfolio-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .hero-image {
+    margin-top: 20px;
+  }
+
+  .contact-container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+/* === Main === */
+/* Portfolio Container */
+.portfolio-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* === Navbar === */
+/* Header */
+.portfolio-header {
+  width: -webkit-fill-available;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fdd835;
+}
+
+.portfolio-nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.portfolio-nav a:hover {
+  color: #fdd835;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: yellow;
+}
+
+.portfolio-nav {
+  display: flex;
+  gap: 20px; /* ? Ensures proper spacing */
+  flex-wrap: wrap;  /* ? Prevents items from overflowing */
+}
+
+.portfolio-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio-nav li {
+  display: inline;
+}
+
+.portfolio-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.portfolio-nav a:hover {
+  color: yellow;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0056b3; /* Updated Main Color */
+  padding: 50px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: -webkit-fill-available;
+}
+
+.hero-content {
+  color: white;
+}
+
+.hero-content p {
+  font-size: 18px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.hero-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;  /* Makes sure it looks like a button */
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: yellow;
+  color: black;
+  border: 2px solid black;
+}
+
+.btn-secondary {
+  background: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  opacity: 0.8;
+}
+
+.hero-image {
+  flex-shrink: 0;
+}
+
+.profile-image {
+  width: 280px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer for resume page*/
+.portfolio-footer {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+
+
+/* === Resume === */
 .main-wrapper {
   display: flex;
   justify-content: center;
@@ -128,6 +556,18 @@ body {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .portfolio-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
   .resume-header {
       flex-direction: column;
       text-align: center;
@@ -191,3 +631,153 @@ body {
 .skills-section ul, .education-section ul, .interests-section ul {
   padding-left: 0px;
 } 
+
+/*=== Contact ===*/
+/* === Contact Page Background === */
+.contact-page {
+  background-color: #0056b3;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* === Contact Content Wrapper === */
+.contact-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* === Contact Info Box === */
+.contact-box {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: left;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-box h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.contact-icon {
+  font-size: 20px;
+  color: yellow;
+}
+
+/* === Contact Form Box === */
+.contact-form-box {
+  background: white;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-box h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Contact Details */
+.contact-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #888; /* ✅ Adds the dotted separator */
+}
+
+/* Remove the last separator */
+.contact-details:last-child {
+  border-bottom: none;
+}
+
+.contact-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form-fields input,
+.contact-form-fields textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.contact-form-fields textarea {
+  height: 100px;
+  resize: none;
+}
+
+.contact-submit-btn {
+  background-color: #1E3A8A;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-submit-btn:hover {
+  background-color: #153477;
+}
+
+.contact-status {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.contact-link {
+  color: yellow;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  color: #fdd835;
+}
+
+/* === Mobile Responsive Fix === */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .contact-box,
+  .contact-form-box {
+    width: 100%;
+    max-width: 350px;
+  }
+}

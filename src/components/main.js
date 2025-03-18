@@ -1,46 +1,39 @@
-import { Link } from "react-router-dom";
-import '../Main.css';
+import { Link, useNavigate } from "react-router-dom";
 import Andrew from '../images/andrew3.jpg';
-import Resume from './resume';
 
 const Main = () => {
-  return (
-    <div className="portfolio-container">
-        <header className="portfolio-header">
-        <div className="logo">Portfolio</div>
-            <nav className="portfolio-nav">
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/resume">Resume</Link></li>
-                    <li><Link to="/portfolio">Portfolio</Link></li>
-                    
-                    <li><Link to="/blog">Blog</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
-                </ul>
-            </nav>
-        </header>
-        <main className="portfolio-main">
+    const navigate = useNavigate();
 
-            <section className="hero-section">
-                <div className="hero-content">
-                    <p>I'm</p>
-                    <h1>Andrew Kim</h1>
-                    <h2>Software Developer</h2>
-                    <div className="hero-buttons">
-                        <button className="btn-primary">Hire Me</button>
-                        <button className="btn-secondary">Contact Me</button>
+    const handleHireMeClick = () => {
+      window.location.href = "mailto:kbyunghak@gmail.com?subject=Hiring Inquiry";
+    };
+  
+    const handleContactMeClick = () => {
+      navigate("/contact");
+    };
+
+    return (
+        <div className="portfolio-container">          
+            <main className="portfolio-main">
+                <section className="hero-section">
+                    <div className="hero-content">
+                        <p>I'm</p>
+                        <h1>Andrew Kim</h1>
+                        <h2>Software Developer</h2>
+                        <div className="hero-buttons">
+                            <button className="btn-primary" onClick={handleHireMeClick}>Hire Me</button>
+                            <button className="btn-secondary" onClick={handleContactMeClick}>Contact Me</button>
+                        </div>
                     </div>
-                </div>
-                <div className="hero-image">
-                <img src= {Andrew} alt="Andrew Kim" className="profile-image" />
-                </div>
-            </section>
-        </main>
+                    <div className="hero-image">
+                    <img src= {Andrew} alt="Andrew Kim" className="profile-image" />
+                    </div>
+                </section>
+            </main>
 
-        <footer className="resume-footer">©2025 Andrew Kim</footer>
-  </div>
-  );
+            <footer className="resume-footer">©2025 Andrew Kim</footer>
+    </div>
+    );
 };
 
 export default Main;
