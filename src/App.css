@@ -11,21 +11,18 @@ body {
 /* === Navbar Styles === */
 .navbar {
   width: 100%;
-  background-color: #1e1e1e;
+  max-width: 1200px; /* Match hero-section */
+  margin: auto; /* Center the navbar */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  box-sizing: border-box;
+  background-color: #1e1e1e;
+  border-radius: 10px; /* Match hero-section border radius */
 }
 
 .content {
-  padding-top: 70px;
+  padding-top: 30px;
 }
 
 .logo-link {
@@ -135,90 +132,128 @@ body {
 }
 
 /* === Contact Page === */
-.contact-container {
-  max-width: 400px;
+/* === Contact Page Styling === */
+.contact-page {
+  background-color: #0056b3;
   width: 100%;
-  margin: 50px auto;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* === Contact Content Wrapper === */
+.contact-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* === Contact Info Box === */
+.contact-box {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
   padding: 25px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: left;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-box h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
   text-align: center;
 }
 
-.contact-container h2 {
-  color: #1E3A8A;
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 20px;
+.contact-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #888;
 }
 
-.contact-form {
+/* Remove the last separator */
+.contact-details:last-child {
+  border-bottom: none;
+}
+
+.contact-icon {
+  font-size: 20px;
+  color: yellow;
+}
+
+/* === Contact Form Box === */
+.contact-form-box {
+  background: white;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* === Contact Form Fields === */
+.contact-form-fields {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
-/* Input Field Styling */
 .input-group {
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .input-group input,
 .input-group textarea {
   width: 100%;
   padding: 12px;
-  padding-left: 40px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 16px;
-  font-family: 'Arial', sans-serif;
-  outline: none;
-  transition: border-color 0.3s;
+  padding-left: 50px; /* Ensures placeholder doesn't overlap with icon */
 }
 
-.input-group input:focus,
-.input-group textarea:focus {
-  border-color: #1E3A8A;
-  box-shadow: 0 0 5px rgba(30, 58, 138, 0.3);
-}
-
-/* Textarea Styling */
-.input-group textarea {
-  resize: none;
-  height: 100px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-/* Placeholder Styling */
-.input-group input::placeholder,
-.input-group textarea::placeholder {
-  font-family: inherit;
-  font-size: 16px;
-  color: #888;
-}
-
-/* Icons Styling */
-.icon {
+/* === Input Icons === */
+.input-icon {
   position: absolute;
-  left: 12px;
+  left: 15px; /* Adjusted to prevent placeholder overlap */
   top: 50%;
   transform: translateY(-50%);
   color: #888;
   font-size: 18px;
 }
 
-/* Fix for Textarea Icon Alignment */
-.input-group textarea + .icon {
-  top: 18px;
-  transform: none;
+/* === Textarea Styling === */
+.input-group textarea {
+  height: 100px;
+  resize: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
-/* Send Button */
-.send-button {
+/* === Placeholder Styling === */
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  font-size: 16px; /* Adjust size */
+  color: #999; /* Light gray color */
+  opacity: 1; /* Ensure full visibility */
+  transition: all 0.3s ease-in-out;
+  font-family: 'Arial', sans-serif;
+}
+
+/* === Send Button === */
+.contact-submit-btn {
   background-color: #1E3A8A;
   color: white;
   font-size: 18px;
@@ -229,17 +264,43 @@ body {
   transition: background-color 0.3s;
 }
 
-.send-button:hover {
+.contact-submit-btn:hover {
   background-color: #153477;
 }
 
-/* === Footer === */
-.resume-footer {
-  text-align: center;
+/* === Status Message === */
+.contact-status {
+  margin-top: 10px;
   font-size: 14px;
-  color: #777;
-  margin-top: 30px;
-  padding: 20px;
+  font-style: italic;
+  color: #333;
+}
+
+/* === Contact Link === */
+.contact-link {
+  color: yellow;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  color: #fdd835;
+}
+
+/* === Mobile Responsive Fix === */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .contact-box,
+  .contact-form-box {
+    width: 100%;
+    max-width: 350px;
+  }
 }
 
 /* === Mobile Responsive Fix === */
@@ -632,152 +693,156 @@ body {
   padding-left: 0px;
 } 
 
-/*=== Contact ===*/
-/* === Contact Page Background === */
-.contact-page {
-  background-color: #0056b3;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
+
+/* === Projects === */
+/* === Projects Page Background === */
+.projects-page {
+  font-family: "Poppins", sans-serif; /* Use a modern, professional font */
+  background-color: #f4f6f9;
   padding: 20px;
-  border-radius: 10px;
 }
 
-/* === Contact Content Wrapper === */
-.contact-content {
+/* === Projects Content Wrapper === */
+.projects-content {
   display: flex;
-  gap: 50px;
+  flex-direction: column; /* Stack projects vertically */
   align-items: center;
-  justify-content: center;
-  width: 100%;
+  gap: 20px;
 }
 
-/* === Contact Info Box === */
-.contact-box {
-  background: rgba(0, 0, 0, 0.9);
-  color: white;
+/* Project Header (Title + Icon) */
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.project-header h3 {
+  margin: 0;
+}
+
+/* Project Description */
+.project-description {
+  font-size: 16px;
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Features List */
+.project-features {
+  background: #ecf0f1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.project-features li {
+  margin-bottom: 6px;
+  color: #2c3e50;
+}
+
+/* Technologies Section */
+.project-tech {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2980b9;
+  margin-top: 12px;
+}
+
+/* Individual Project Cards */
+.project-box {
+  width: 80%;
+  max-width: 700px;
+  background: white;
   padding: 25px;
   border-radius: 12px;
-  text-align: left;
-  width: 100%;
-  max-width: 350px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-.contact-box h2 {
+.project-box:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+}
+
+/* === Project Titles === */
+.project-box h3 {
   font-size: 22px;
-  margin-bottom: 15px;
   font-weight: bold;
-  text-align: center;
+  color: #1E3A8A;
 }
 
-.contact-details {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 10px 0;
+.project-description p {
+  margin-bottom: 10px;
 }
 
-.contact-icon {
-  font-size: 20px;
-  color: yellow;
-}
-
-/* === Contact Form Box === */
-.contact-form-box {
-  background: white;
-  padding: 50px;
-  border-radius: 12px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  width: 100%;
-  max-width: 400px;
-}
-
-.contact-box h2 {
-  font-size: 22px;
-  margin-bottom: 15px;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Contact Details */
-.contact-details {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 15px 0;
-  padding-bottom: 10px;
-  border-bottom: 1px dashed #888; /* ✅ Adds the dotted separator */
-}
-
-/* Remove the last separator */
-.contact-details:last-child {
-  border-bottom: none;
-}
-
-.contact-form-fields {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.contact-form-fields input,
-.contact-form-fields textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+/* === Project Description === */
+.project-box p {
   font-size: 16px;
+  color: #333;
 }
 
-.contact-form-fields textarea {
-  height: 100px;
-  resize: none;
-}
-
-.contact-submit-btn {
-  background-color: #1E3A8A;
-  color: white;
-  font-size: 18px;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contact-submit-btn:hover {
-  background-color: #153477;
-}
-
-.contact-status {
-  margin-top: 10px;
+/* === Project Tech Stack === */
+.project-tech {
   font-size: 14px;
-}
-
-.contact-link {
-  color: yellow;
-  text-decoration: none;
   font-weight: bold;
+  color: #555;
+  margin-top: 10px;
 }
 
-.contact-link:hover {
-  text-decoration: underline;
-  color: #fdd835;
+/* === Project Icons === */
+.project-icon {
+  width: 32px;
+  height: 32px;
+  color: #1E3A8A;
+  margin-bottom: 10px;
 }
 
-/* === Mobile Responsive Fix === */
+/* === Responsive Design === */
 @media (max-width: 768px) {
-  .contact-content {
+  .projects-content {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
   }
 
-  .contact-box,
-  .contact-form-box {
-    width: 100%;
-    max-width: 350px;
+  .project-box {
+    max-width: 300px;
   }
+}
+
+.project-features {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.project-features li {
+  margin-bottom: 5px;
+}
+
+.youtube-container {
+  margin-top: 15px;
+}
+
+.project-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }

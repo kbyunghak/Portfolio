@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Globe } from "lucide-react";
+import { Mail, Phone, MapPin, Globe, User, Type, MessageSquare } from "lucide-react";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
@@ -83,14 +83,26 @@ const Contact = () => {
         <div className="contact-form-box">
           <h2>Send a Message</h2>
           <form onSubmit={handleSubmit} className="contact-form-fields">
-            <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
-            <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
-            <input type="text" name="title" placeholder="Subject (optional)" value={formData.title} onChange={handleChange} />
-            <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} required></textarea>
+            <div className="input-group">
+              <User className="input-icon" />
+              <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
+            </div>
+            <div className="input-group">
+              <Mail className="input-icon" />
+              <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+            </div>
+            <div className="input-group">
+              <Type className="input-icon" />
+              <input type="text" name="title" placeholder="Subject (optional)" value={formData.title} onChange={handleChange} />
+            </div>
+            <div className="input-group">
+              <MessageSquare className="input-icon" />
+              <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} required></textarea>
+            </div>
             <button type="submit" className="contact-submit-btn" disabled={isSending}>
               {isSending ? "Sending..." : "Send Message"}
             </button>
-            <p className="contact-status">{statusMessage}</p>
+            <p className="contact-status" style={{ fontStyle: 'italic', color: '#333' }}>{statusMessage}</p>
           </form>
         </div>
       </div>
