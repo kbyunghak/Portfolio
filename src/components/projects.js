@@ -75,7 +75,7 @@ const projects = [
     images: [
       { src: azzier, alt: "Azzier" }
     ],
-    youtube: "https://youtu.be/z0PKVbjkLz4",
+    youtube: "https://www.youtube.com/watch?v=gJObNtp79Q4",
   },
   {
     title: "Azzier Mobile",
@@ -159,6 +159,34 @@ const projects = [
     ],
     technologies: "React, Node.js, Json Server, MongoDB Atlas/ Compress, Express, Render, Postman, Git, WebAPI, RESTful API",
     images: [{ src: vocaboost, alt: "VocaBoost App" }],
+  },
+  {
+    title: "Pronunciation Game",
+    icon: <BookOpen className="project-icon" />,
+    description: (
+      <>
+        <p>
+          Developed an interactive <strong>English pronunciation game</strong> using <strong>React</strong> and the <strong>Web Speech API</strong>. 
+          The app helps users improve their pronunciation by comparing spoken words with target vocabulary or sentences in real-time.
+        </p>
+        <p>
+          Includes a <strong>falling-word canvas game</strong>, color-coded sentence feedback, and dynamic <strong>accuracy tracking</strong>. 
+          Users get instant visual feedback on their pronunciation with color-coded highlights—green for correct, red for incorrect.
+        </p>
+      </>
+    ),
+    features: [
+      "Voice recognition powered by Web Speech API",
+      "Falling word game with score, level, and lives",
+      "Real-time pronunciation feedback with color-coded text",
+      "Dynamic sentence mode with sentence-by-sentence validation",
+      "Accuracy and mispronounced word tracking",
+      "Responsive UI optimized for web",
+    ],
+    technologies: "React, JavaScript, Web Speech API, HTML5 Canvas, CSS, GitHub Pages",
+    images: [
+      { src: require("../images/pronunciation_game.png"), alt: "Pronunciation Game" }
+    ]    
   },
   {
     title: "Portfolio Website",

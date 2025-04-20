@@ -70,6 +70,27 @@ const Resume = () => {
               <section className="project-section">
                 <h3 className="resume-section-heading">Projects</h3>
                 <div className="item">
+                  <h4 className="item-title">Pronunciation Game</h4>
+                  <div className="item-meta">Personal React Project | 2025</div>
+                  <ul className="resume-list">
+                    <li>Built a real-time pronunciation training app using React and the Web Speech API.</li>
+                    <li>Implemented a falling-word game and dynamic sentence checker for spoken feedback.</li>
+                    <li>Highlighted spoken word accuracy using live color-coded text (green/red).</li>
+                    <li>Tracked user performance and pronunciation accuracy with visual feedback.</li>
+                    <li>Deployed on GitHub Pages: <a href="https://kbyunghak.github.io/game_pronunciation/" target="_blank" rel="noreferrer">View App</a></li>
+                  </ul>
+                </div>
+                <div className="item">
+                  <h4 className="item-title">AVEVA Manufacturing Execution System</h4>
+                  <div className="item-meta">SCADA System, Ballard Power Systems | 2024</div>
+                  <ul className="resume-list">
+                    <li>Developed a RESTful Web API to improve the management and functionality of the MES.</li>
+                    <li>Wrote complex SQL scripts to handle large databases and optimize data queries.</li>
+                    <li>Assisted engineers with troubleshooting tasks, improving issue resolution efficiency.</li>
+                    <li>Integrated Oracle for inventory management and utilized web application APIs to create work orders.</li>
+                  </ul>
+                </div>
+                <div className="item">
                   <h4 className="item-title">Ballard Bus Data</h4>
                   <div className="item-meta">Web Development Project, Ballard Power Systems | 2021 - 2024</div>
                   <ul className="resume-list">
@@ -88,6 +109,17 @@ const Resume = () => {
                     <li>Developed a file-sharing feature supporting images, videos, PDFs, and Word documents.</li>
                     <li>Implemented an intuitive UI for task tracking and workflow optimization.</li>
                     <li>Created an automated email notification system to enhance deadline management.</li>
+                  </ul>
+                </div>
+                <div className="item">
+                  <h4 className="item-title">Module Assembly Timer</h4>
+                  <div className="item-meta">WPF, Ballard Power Systems | 2022 - 2023</div>
+                  <ul className="resume-list">
+                    <li>Developed the application using WPF to create a user-friendly interface for task management and data visualization.</li>
+                    <li>Collected task data, including task types, durations, and worker proficiency, to identify patterns, diagnose issues, and optimize workflows.</li>
+                    <li>Created entity-relationship models and developed test cases and plans, conducting manual testing to ensure the reliability of the application.</li>
+                    <li>Enabled decision-making by aggregating and analyzing data on task durations and issues across various test cycles.</li>
+                    <li>Improved communication between workers at noisy assembly stations by integrating stack light systems.</li>
                   </ul>
                 </div>
                 <div className="item">
