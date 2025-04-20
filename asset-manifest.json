@@ -1,24 +1,25 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.16dfe142.css",
-    "main.js": "/Portfolio/static/js/main.3ecc85b0.js",
+    "main.js": "/Portfolio/static/js/main.af1e9805.js",
     "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
     "static/media/andrew3.jpg": "/Portfolio/static/media/andrew3.159280deeb31aa25db14.jpg",
     "static/media/Azzier.png": "/Portfolio/static/media/Azzier.1c3b87b17d7e8ed3af48.png",
     "static/media/portfolio.png": "/Portfolio/static/media/portfolio.3649deb171bb4c826a73.png",
     "static/media/AzzierMobile.png": "/Portfolio/static/media/AzzierMobile.c5b86da1a5b70184ac38.png",
     "static/media/Module_Assembly_Timer.png": "/Portfolio/static/media/Module_Assembly_Timer.9f5914eb8613cfaa0b07.png",
+    "static/media/pronunciation_game.png": "/Portfolio/static/media/pronunciation_game.a91dc0b6fc7d6fc2ff58.png",
     "static/media/Andrew.png": "/Portfolio/static/media/Andrew.95fa10075d55146899a3.png",
     "static/media/ballard.png": "/Portfolio/static/media/ballard.11450b7c3894ce8988ff.png",
     "static/media/scheduler.png": "/Portfolio/static/media/scheduler.7298b0f277f3058fdcff.png",
     "static/media/vocaboost.png": "/Portfolio/static/media/vocaboost.a740611349f276c699db.png",
     "index.html": "/Portfolio/index.html",
     "main.16dfe142.css.map": "/Portfolio/static/css/main.16dfe142.css.map",
-    "main.3ecc85b0.js.map": "/Portfolio/static/js/main.3ecc85b0.js.map",
+    "main.af1e9805.js.map": "/Portfolio/static/js/main.af1e9805.js.map",
     "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.16dfe142.css",
-    "static/js/main.3ecc85b0.js"
+    "static/js/main.af1e9805.js"
   ]
 }
