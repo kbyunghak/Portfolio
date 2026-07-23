@@ -25,6 +25,8 @@ Company and customer identifiers, internal contracts, infrastructure details, an
 
 - React 19
 - React Router 6
+- JavaScript (ES6+)
+- JSON
 - CSS
 - Lucide icons
 - EmailJS
