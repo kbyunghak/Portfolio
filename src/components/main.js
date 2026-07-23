@@ -3,7 +3,7 @@ import { Cloud, Database, Factory, Server } from "lucide-react";
 
 const metrics = [
   { value: "8+ years", label: "Enterprise application experience" },
-  { value: "~50,000", label: "Telemetry files processed daily" },
+  { value: "50K+", label: "Telemetry files processed daily" },
   { value: "90%+", label: "Reduction in manual monitoring" },
   { value: "Production", label: "Manufacturing, logistics, and ERP/MES systems" },
 ];
