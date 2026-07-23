@@ -1,67 +1,89 @@
-# 👋 Hi, I'm Andrew Kim - Software Developer 🚀
+# Andrew Kim — Software Development Portfolio
 
-I am a **Full-Stack Software Developer** specializing in **React, .NET, and cloud-based solutions**.  
-Passionate about building **scalable, efficient, and user-friendly applications**.  
+Personal portfolio presenting C#/.NET, Azure, enterprise integration, manufacturing systems, and production support experience.
 
----
+**Live site:** [kbyunghak.github.io/Portfolio](https://kbyunghak.github.io/Portfolio/)
 
-## 🌐 **My Portfolio**
-🔗 **Live Portfolio:**  
-➡️ [Visit My Portfolio Website](https://kbyunghak.github.io/Portfolio/)
+## Featured case studies
 
-This portfolio showcases my **projects, experience, and technical skills**, including:  
-✔ Interactive project showcases  
-✔ Downloadable resume  
-✔ Contact form for networking  
+- Logistics Integration & Event Processing — Azure Functions, Service Bus, Durable Entities, SQL Server
+- Industrial Data Ingestion & Monitoring — C#/.NET, SQL Server, Azure, FTP/SFTP, monitoring and backfill
+- Module Assembly Timer — C#, Windows Forms, Entity Framework 6, SQL Server
+- Azzier CMMS & Mobile — ASP.NET, SQL Server, REST APIs, Telerik, Kendo UI, Android
 
----
+Company and customer identifiers, internal contracts, infrastructure details, and sensitive production data are intentionally excluded. Public diagrams are simplified or reconstructed for portfolio use.
 
-## 💼 **Featured Projects**
-### 🔹 [VocaBoost - Vocabulary Learning App](https://github.com/kbyunghak/VocaBoost)
-📌 **Description:** A vocabulary learning platform with **day-based word organization, tracking, and an interactive UI**.  
-🛠 **Tech Stack:** React, Firebase, Tailwind CSS, JavaScript, Node.js  
+## Site features
 
-### 🔹 [Scheduler System](https://github.com/kbyunghak/Scheduler)
-📌 **Description:** A **task scheduling system** with real-time notifications, conflict detection, and drag-and-drop functionality.  
-🛠 **Tech Stack:** React, TypeScript, Redux, FullCalendar, Node.js, PostgreSQL, WebSockets  
+- Hash-based routing compatible with GitHub Pages
+- Responsive Home, About, Experience, Projects, case-study, and Contact pages
+- Downloadable Resume and detailed Project Portfolio PDFs
+- Semantic headings, labeled form fields, keyboard focus states, and descriptive image text
+- Automated test, build, and GitHub Pages deployment workflow
 
-### 🔹 [Azzier Mobile - CMMS App](https://github.com/kbyunghak/AzzierMobile)
-📌 **Description:** A mobile **asset management system** for field maintenance operations with **offline support**.  
-🛠 **Tech Stack:** React Native, TypeScript, REST API, SQLite, QR Code Scanner  
+## Technology
 
-### 🔹 [Ballard Bus Data - Real-time Monitoring](https://github.com/kbyunghak/BallardBusData)
-📌 **Description:** A **real-time data ingestion system** for monitoring **bus performance and data loss detection**.  
-🛠 **Tech Stack:** C# ASP.NET Core, MS SQL, Azure, Aveva Insight  
+- React 19
+- React Router 6
+- CSS
+- Lucide icons
+- EmailJS
+- Create React App
+- GitHub Pages
 
----
+## Local setup
 
-## 🛠 **Tech Stack**
-### 🎨 **Frontend**
-- React, TypeScript, Redux, Tailwind CSS
-- React Native (Mobile), Expo
-- HTML, CSS, JavaScript, Bootstrap  
+```bash
+git clone https://github.com/kbyunghak/portfolio.git
+cd portfolio
+cp .env.example .env.local
+npm ci
+npm start
+```
 
-### ⚙ **Backend**
-- ASP.NET Core (C#), Entity Framework  
-- Node.js, Express.js  
-- Firebase, PostgreSQL, MS SQL, SQLite  
+The EmailJS variables are required only for sending the Contact form. Do not store server secrets in client-side environment variables.
 
-### ☁ **Cloud & DevOps**
-- **Azure** (Functions, Storage, App Services)  
-- **GitHub Pages** (Portfolio Deployment)  
-- **Netlify** (Frontend Hosting)  
-- **Docker** (Containerization)  
+## Environment variables
 
----
+Copy `.env.example` to `.env.local` and provide the following client-side EmailJS identifiers when contact-form delivery is required:
 
-## 📬 **Contact Me**
-🔗 **GitHub:** [github.com/kbyunghak](https://github.com/kbyunghak)  
-🔗 **LinkedIn:** [linkedin.com/in/kbyunghak](https://www.linkedin.com/in/kbyunghak/)  
-📧 **Email:** [kbyunghak@gmail.com](mailto:kbyunghak@gmail.com)  
+- `REACT_APP_EMAILJS_SERVICE_ID`
+- `REACT_APP_EMAILJS_TEMPLATE_ID`
+- `REACT_APP_EMAILJS_PUBLIC_KEY`
 
----
+When these values are unavailable, the site disables the form and presents a direct email link.
 
-## 🚀 **How to Run My Portfolio Locally**
-1️⃣ **Clone the repository**
-```sh
-git clone https://github.com/kbyunghak/Portfolio.git
+## Validation
+
+```bash
+npm test -- --watchAll=false
+npm run build
+```
+
+The test suite covers primary navigation, featured case-study rendering, invalid routes, required project data, unique slugs, and Contact form success, failure, and unconfigured states.
+
+The production build is configured for the official case-sensitive path `/Portfolio/`.
+
+## Deployment
+
+Pushes to `master` or `main` run tests, build the site, and deploy the `build` directory through GitHub Actions. Configure the three EmailJS values as GitHub Actions secrets before enabling the Contact form in production.
+
+## Accessibility
+
+- Semantic page landmarks and heading hierarchy
+- Visible keyboard focus
+- Explicit Contact form labels and live status messages
+- Alternative text for meaningful case-study images
+- Responsive layouts without horizontal scrolling at supported breakpoints
+
+## Known limitations
+
+- HashRouter produces URLs such as `/Portfolio/#/projects`; individual hash routes are not independently listed in the sitemap.
+- Company source code and internal production details are not publicly available.
+- EmailJS configuration is required for the Contact form to send messages.
+
+## Contact
+
+- [LinkedIn](https://www.linkedin.com/in/kbyunghak/)
+- [GitHub](https://github.com/kbyunghak)
+- [Email](mailto:kbyunghak@gmail.com)

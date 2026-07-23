@@ -1,33 +1,55 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Github, Linkedin } from "lucide-react"; // ✅ Added LinkedIn icon
+import { NavLink } from "react-router-dom";
+import { Github, Linkedin } from "lucide-react";
 
-const Navbar = () => {
-  return (
-    <header className="navbar">
-      <div className="logo">
-        <Link to="/" className="logo-link">Andrew Kim</Link> {/* ✅ Clickable Logo */}
-      </div>
-      <nav className="portfolio-nav">
+const internalLinks = [
+  { to: "/", label: "Home", end: true },
+  { to: "/about", label: "About" },
+  { to: "/experience", label: "Experience" },
+  { to: "/projects", label: "Projects" },
+  { to: "/contact", label: "Contact" },
+];
+
+const Navbar = () => (
+  <header className="site-header">
+    <div className="navbar">
+      <NavLink to="/" className="logo-link">
+        <span>Andrew Kim</span>
+        <small>Software Developer</small>
+      </NavLink>
+
+      <nav className="portfolio-nav" aria-label="Primary navigation">
         <ul>
-          <li><Link to="/home">Home</Link></li>
-          <li><Link to="/resume">About</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
-          <li>  
-            <a href="https://github.com/kbyunghak" target="_blank" rel="noopener noreferrer">
-                GitHub <Github size={16} />
+          {internalLinks.map(({ to, label, end }) => (
+            <li key={to}>
+              <NavLink
+                to={to}
+                end={end}
+                className={({ isActive }) => isActive ? "active" : undefined}
+              >
+                {label}
+              </NavLink>
+            </li>
+          ))}
+          <li>
+            <a href={`${process.env.PUBLIC_URL}/documents/Andrew_Kim_Resume.pdf`} download>
+              Resume
             </a>
           </li>
-          <li>  
-            <a href="https://www.linkedin.com/in/kbyunghak/" target="_blank" rel="noopener noreferrer">
-                LinkedIn <Linkedin size={16} />
+          <li className="social-link">
+            <a href="https://github.com/kbyunghak" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+              <Github size={18} aria-hidden="true" />
             </a>
           </li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li className="social-link">
+            <a href="https://www.linkedin.com/in/kbyunghak/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+              <Linkedin size={18} aria-hidden="true" />
+            </a>
+          </li>
         </ul>
       </nav>
-    </header>
-  );
-};
+    </div>
+  </header>
+);
 
 export default Navbar;
