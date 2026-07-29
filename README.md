@@ -1,78 +1,145 @@
 # Andrew Kim - Software Development Portfolio
 
-[![Test and deploy portfolio](https://github.com/kbyunghak/Portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/kbyunghak/Portfolio/actions/workflows/deploy.yml)
+[![CI](https://github.com/kbyunghak/Portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/kbyunghak/Portfolio/actions/workflows/deploy.yml)
+[![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-1f6feb)](https://kbyunghak.github.io/Portfolio/)
 
 Portfolio website presenting production experience in C#/.NET, Azure, enterprise integration, industrial data processing, manufacturing applications, and enterprise CMMS development.
 
-**Live site:** [kbyunghak.github.io/Portfolio](https://kbyunghak.github.io/Portfolio/)
+Software developer with 8+ years of experience building enterprise applications,
+manufacturing systems, cloud integrations, and data-intensive software. I focus on
+reliable production systems and use personal projects to explore AI-assisted
+development, modern web applications, and interactive product design.
 
-## Featured case studies
+[LinkedIn](https://www.linkedin.com/in/kbyunghak/) ·
+[GitHub](https://github.com/kbyunghak) ·
+[Email](mailto:kbyunghak@gmail.com)
+
+## Core Expertise
+
+| Area | Technologies and domains |
+| --- | --- |
+| Enterprise development | C#, .NET, ASP.NET Core, REST APIs, SQL Server |
+| Cloud and integration | Azure Functions, Azure Service Bus, Durable Entities, Azure Storage |
+| Manufacturing systems | MES, ERP, SCADA, CMMS, OT/IT integration, Windows applications |
+| Modern web and mobile | React, Next.js, TypeScript, React Native, Expo |
+| Delivery and quality | GitHub Actions, xUnit, Vitest, Jest, Docker |
+
+## Professional Case Studies
+
+The case studies below describe responsibilities, design decisions, and measurable
+outcomes without exposing company source code, customer data, operational
+identifiers, or other proprietary details.
 
 ### Logistics Integration & Event Processing
 
-Event-driven integration between internal business systems and external transportation services using Azure Functions, Azure Service Bus, Durable Entities, SQL Server, Application Insights, and Serilog.
+Event-driven integration between internal business systems and external
+transportation services, designed for fault isolation, traceability, and reliable
+asynchronous processing.
+
+**Technologies:** C#, .NET, Azure Functions, Azure Service Bus, Durable Entities,
+SQL Server, Application Insights, Serilog
 
 ### Industrial Data Ingestion & Monitoring
 
-High-volume telemetry ingestion, validation, missing-data detection, monitoring, and automated recovery across FTP/SFTP, SQL Server, Azure Functions, and Azure Blob Storage.
+High-volume telemetry ingestion, validation, missing-data detection, monitoring,
+and automated recovery across industrial and cloud systems. The workflow processed
+approximately 50,000 files per day and reduced manual monitoring by more than 90%.
 
-Key results include processing approximately 50,000 files per day and reducing manual monitoring by more than 90%.
+**Technologies:** C#, ASP.NET Core, SQL Server, Azure Functions, Azure Blob Storage,
+FTP/SFTP, REST APIs
 
 ### Module Assembly Timer
 
-Windows Forms production application for real-time cycle tracking, pause and exception capture, quality validation, production recording, and operator visibility. Built with C#/.NET, Entity Framework 6, and SQL Server.
+Production-floor application for cycle tracking, pause and exception capture,
+quality validation, production recording, and operator visibility.
+
+**Technologies:** C#, .NET, Windows Forms, Entity Framework 6, SQL Server
 
 ### Azzier CMMS & Mobile
 
-Enterprise CMMS web and mobile development covering work orders, asset management, REST API integration, mobile synchronization, Telerik/Kendo UI customization, SQL Server, Android, and Azure.
+Enterprise maintenance software covering work orders, asset management, REST API
+integration, mobile synchronization, and field workflows.
 
-Public case studies use reconstructed workflow diagrams and exclude proprietary implementation details, operational identifiers, customer data, and company source code.
+**Technologies:** React Native, TypeScript, REST APIs, SQL Server, SQLite,
+Telerik/Kendo UI, Android, Azure
 
-## Website features
+[Explore the full professional case studies on the portfolio website](https://kbyunghak.github.io/Portfolio/#/projects)
 
-- Responsive Home, About, Experience, Projects, project-detail, and Contact pages
-- Dedicated case-study routes with responsibilities, challenges, decisions, outcomes, technologies, and architecture diagrams
-- Hash-based routing compatible with GitHub Pages
-- Compatibility redirect from `/resume` to `/about`
-- Safe handling of invalid routes and project slugs
-- Downloadable Resume and Project Portfolio PDFs
-- Contact form with EmailJS configuration detection and direct-email fallback
-- Semantic headings, form labels, keyboard focus states, live status messages, and image alternative text
-- Automated test, build, and GitHub Pages deployment workflow
+## Featured Personal Projects
 
-## Technology stack
+### MacroBrief
 
-- React 19
-- React Router 6
-- JavaScript (ES6+)
-- JSON
-- CSS
-- Lucide React
-- EmailJS
-- Jest and React Testing Library
-- Create React App 5
-- GitHub Actions
-- GitHub Pages
+Portfolio-specific macro-impact dashboard that connects same-day macro and
+breaking-news events to a user's U.S. stock holdings while maintaining a strict
+information-only boundary.
 
-## Project structure
+**Highlights:** source-linked impact cards, rule-based exposure mapping, official
+RSS ingestion, deterministic AI guardrails, automated API and web testing
 
-```text
-src/
-  components/       Page and case-study components
-  data/             Structured project content and validation tests
-  images/           Public workflow and architecture diagrams
-public/
-  documents/        Downloadable Resume and Portfolio PDFs
-  sitemap.xml       Public site map
-.github/workflows/  Test, build, and deployment workflow
-```
+**Tech:** Next.js, React, TypeScript, .NET 9, xUnit, Vitest, GitHub Actions
 
-## Local development
+[Repository](https://github.com/kbyunghak/MacroBrief) ·
+[Live Demo](https://kbyunghak.github.io/MacroBrief/)
 
-Requirements:
+### Burnaby PlanLab
 
-- Node.js 20 or later
-- npm
+Interactive urban-planning simulator for exploring housing scenarios and comparing
+their estimated effects through maps, charts, and clearly labeled assumptions.
+
+**Highlights:** scenario modeling, official-data references, interactive mapping,
+comparison charts, transparent model assumptions
+
+**Tech:** React, JavaScript, Leaflet, Recharts, Jest, GitHub Actions
+
+[Repository](https://github.com/kbyunghak/Burnaby-PlanLab) ·
+[Live Demo](https://kbyunghak.github.io/Burnaby-PlanLab/)
+
+### ReadTheRoom
+
+Mobile-first narrative choice game about reading social situations, making
+decisions, and managing character stats through short story episodes.
+
+**Highlights:** choice-driven scenarios, Korean and English localization,
+save/resume support, story progression, encoding and data validation
+
+**Tech:** Expo, React Native, TypeScript, AsyncStorage, Vitest, GitHub Actions
+
+[Repository](https://github.com/kbyunghak/ReadTheRoom)
+
+### SpeakFall
+
+Voice-powered English learning game combining sentence practice, pronunciation
+feedback, and a fast-paced falling-word challenge.
+
+**Highlights:** browser speech recognition, word-level comparison, pronunciation
+scoring, voice-controlled gameplay, validated learning content
+
+**Tech:** React, Vite, Web Speech API, Vitest, GitHub Actions
+
+[Repository](https://github.com/kbyunghak/SpeakFall) ·
+[Live Demo](https://kbyunghak.github.io/SpeakFall/)
+
+## Technical Skills
+
+- **Backend:** C#, .NET, ASP.NET Core, Entity Framework, Node.js
+- **Cloud:** Azure Functions, Azure Service Bus, Azure Storage, Application Insights
+- **Data:** SQL Server, PostgreSQL, SQLite, JSON-based data pipelines
+- **Frontend:** React, Next.js, TypeScript, JavaScript, HTML, CSS
+- **Mobile:** React Native, Expo, Android
+- **Enterprise:** MES, ERP, SCADA, CMMS, OT/IT integration
+- **Testing:** xUnit, Vitest, Jest, React Testing Library
+- **DevOps and tools:** GitHub Actions, Git, Docker
+
+## Portfolio Website
+
+This repository contains the React application behind the
+[live portfolio](https://kbyunghak.github.io/Portfolio/). It provides dedicated
+pages for experience, professional case studies, project details, downloadable
+documents, and contact information.
+
+### Run Locally
+
+Requirements: Node.js 20 or later and npm.
 
 ```bash
 git clone https://github.com/kbyunghak/Portfolio.git
@@ -81,65 +148,20 @@ npm ci
 npm start
 ```
 
-The development site is available at `http://localhost:3000/Portfolio/`.
-
-## Contact form configuration
-
-Copy `.env.example` to `.env.local` when EmailJS delivery is required:
-
-```bash
-cp .env.example .env.local
-```
-
-Configure these client-side identifiers:
-
-```text
-REACT_APP_EMAILJS_SERVICE_ID
-REACT_APP_EMAILJS_TEMPLATE_ID
-REACT_APP_EMAILJS_PUBLIC_KEY
-```
-
-When they are unavailable, the Contact form is disabled and the website displays a direct email option. Do not store private server credentials in client-side environment variables.
-
-## Testing and production build
+Run the test suite and production build:
 
 ```bash
 npm test -- --watchAll=false
 npm run build
 ```
 
-The test suite covers:
-
-- Primary navigation and page rendering
-- Featured project rendering
-- Invalid routes and invalid project slugs
-- `/resume` compatibility redirect
-- Required project fields and unique slugs
-- Contact form success and failure behavior
-- Contact form behavior when EmailJS is not configured
-
-## Deployment
-
-Pushes to `master` or `main` trigger the workflow in `.github/workflows/deploy.yml`.
-
-The workflow:
-
-1. Installs dependencies with `npm ci`
-2. Runs the test suite
-3. Creates an optimized production build
-4. Uploads the build artifact
-5. Deploys the site to GitHub Pages
-
-EmailJS values can be configured as GitHub Actions secrets when production form delivery is enabled.
-
-## Known limitations
-
-- HashRouter produces URLs such as `/Portfolio/#/projects`; individual hash routes are not independently represented in `sitemap.xml`.
-- The project currently uses Create React App 5. Dependency audit warnings may originate from transitive build-tool packages.
-- A forced dependency upgrade has not been applied because it could introduce breaking changes. Migration to a modern build tool such as Vite can be considered separately.
-- Company source code and internal production data are intentionally excluded.
+Pushes to `master` or `main` run the test, build, and GitHub Pages deployment
+workflow.
 
 ## Contact
+
+I am based in Burnaby, British Columbia and am open to software development and
+enterprise integration opportunities.
 
 - [Portfolio](https://kbyunghak.github.io/Portfolio/)
 - [LinkedIn](https://www.linkedin.com/in/kbyunghak/)
